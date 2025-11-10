@@ -1,17 +1,15 @@
-//your JS code here. If required.
-// const selectElement=document.getElementById("colorSelect");
-// const selectedIndex = selectElement.selectedIndex;
-
-// if (selectedIndex !== -1) {
-//   selectElement.remove(selectedIndex);
-// }
 
 
-const selectElement = document.getElementById("colorSelect");
-
-for (let i = 0; i < selectElement.options.length; i++) {
-  if (selectElement.options[i].text === "Green") {
-    selectElement.remove(i);
-    break;
+const button = document.querySelector('input[type="button"]');
+button.addEventListener('click', function() {
+  // Get the dropdown element
+  const colorSelect = document.getElementById('colorSelect');
+  
+  // Get the selected index
+  const selectedIndex = colorSelect.selectedIndex;
+  
+  // Remove the selected option if any
+  if (selectedIndex !== -1) {
+    colorSelect.remove(selectedIndex);
   }
-}
+});
